@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NC State Men's Club Rugby</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/ncsulogo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#accolades">Accolades</a></li>
+                <li><a href="#hof">Hall of Fame</a></li>
+                <li><a href="#interestform">Interest Form</a></li>
+                <li><a href="#socialmedia">Social Media</a></li>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>This is the official page for North Carolina State Univeristy Men's Club Rugby</p>
+        </div>
+    </div>
+</div>
+<!--about section-->
+<div id="about">
+   <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/team.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About the Club</h1>
+                <p>We are a student run club at NC State University that competes in The National Collegiate Rugby D1AA and The Southern Rugby Conference</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('officers')">Current Officers</p>
+                    <p class="tab-links" onclick="opentab('schedule')">Schedule</p>
+                    <p class="tab-links" onclick="opentab('practice')">Practice Times and Location</p>
+                </div> 
+                <!-- Current Officers -->
+                <div class="tab-contents active-tab" id="officers">
+                    <ul>
+                        <li><span>A Side Coach</span><br>Brian Ketchum</li>
+                        <li><span>B Side Coach</span><br>John MacWilliam</li>
+                        <li><span>President</span><br>Cam Wilson</li>
+                        <li><span>Vice President</span><br>Charlie Howard</li>
+                        <li><span>Treasurer</span><br>Charlie Whitaker</li>
+                        <li><span>Match Secretary</span><br>filler</li>
+                        <li><span>Social Media</span><br>filler</li>
+                        <li><span>Social Chair</span><br>filler</li>                        
+                        <li><span>Alumni Chair</span><br>Alex Tomlinson</li>
+                    </ul>
+                </div>
+                <!-- Schedule -->
+                <div class="tab-contents" id="schedule">
+                    <ul>
+                        <li><span>Spring Schedule</span></li>
+                    </ul>
+                </div>
+                <!-- Practice -->
+                <div class="tab-contents" id="practice">
+                    <ul>
+                        <li><span>Practice Times</span><br>Tuesdays & Thursdays 5:30pm-7:30pm</li>
+                        <li><span>Practice Location</span><br>Method Fields</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   </div>
+</div>
+
+<!-- Accolades -->
+<div id="accolades">
+    <div class="container">
+        <h1 class="sub-title">Accomplishments</h1>
+        <div class="team-accolades">
+            <h2>Nationals</h2>
+            <ul>
+                <li>2018 D2 15's National Champions</li>
+                <li>2019 D2 7's National Champs</li>
+                <li>2022 D2 15's Third Place</li>
+                <li>2023 D2 7's Runner Up</li>
+            </ul>
+        </div>
+        <div class="individual-accolades">
+            <h2>2023 15's Southern Rugby Conference D1/D1AA All Conference Team</h3>
+            <ul>
+                <li>#1 - Ibrahim Harb</li>
+                <li>#5 - Charlie Howard</li>
+                <li>#8 - Alex Tomlinson</li>
+            </ul>
+            <h2>2023 15's Southern Rugby Conference All Conference Team</h3>
+            <ul>
+                <li>#7 - David Scott</li>
+                <li>#15 - Henry Jones </li>
+                <li>#17 - Dan Bennet</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Hall of Fame-->
+<div id="hof">
+    <div class="container">
+        <h1 class="sub-title">NC State Men's Rugby Hall of Fame</h1>
+        <p> The NC State Men's Rugby Hall of Fame was created on December 8th, 2023 with the inaugural induction of Head Coach Brian Ketchum.</p>
+    </div>
+</div>
+
+<!-- Interest Form -->
+<div id="interestform">
+    <div class="container">
+        <div class="row">
+            <div class="interestform-left">
+                <h1 class="sub-title">Interest Form</h1>
+                <p>Please submit this form if you are interested in joining the club.</p>
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="number" name="age" placeholder="age" required>
+                    <input type="text" name="email" placeholder="Email" required>
+                    <input type="text" name="phone" placeholder="Phone Number">
+                    <textarea name="message" rows="4" placeholder="Experience Level"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div> 
+</div>
+<!--- Social Media -->
+<div id="socialmedia">
+    <div class="container">
+        <h1 class="sub-title">Social Media</h1>
+        <div class="socialmedia-list">
+            <div>
+                <h2>Instagram</h2>
+                <a href="instagram.com/ncstatemensclubrugby">Icon - Follow Us!</a>
+            </div>
+            <div>
+                <h2>Facebook</h2>
+                <a href="facebook.com/ncstatemensclubrugby">Icon - Follow Us!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- opentab() function-->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink in tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent in tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
