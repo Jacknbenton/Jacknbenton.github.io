@@ -43,7 +43,6 @@
         <p>Pictures provided from @ncstatemensclubrugby on Instagram</p>
     </div>
   </div>
-
 <!--about section-->
 <div id="about">
    <div class="container">
@@ -54,13 +53,12 @@
             <div class="about-col-2">
                 <h1 class="sub-title">About the Team</h1>
                 <p>NC State Men's Club Rugby was founded in 1970 and has been a student run program since then. We
-                    compete in two seasons: Fall 15s and Spring 7s.<br><br> Information on current officers and roster can be found below:
-                </p>
+                    compete in two seasons: Fall 15s and Spring 7s.<br><br> Information on current officers and roster can be found below:</p>
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('officers')">Current Officers</p>
-                    <p class="tab-links" onclick="opentab('roster')">Current Roster</p>
+                    <p class="tab-links active-link" onclick="opentab('officers')">Officers</p>
+                    <p class="tab-links" onclick="opentab('roster')">Roster</p>
                 </div> 
-                <!-- Current OffTicers -->
+                <!-- Current Officers -->
                 <div class="tab-contents active-tab" id="officers">
                     <ul>
                         <li><span>President</span><br>Cam Wilson</li>
@@ -79,6 +77,23 @@
                         <li>Alex Tomlinson</li>
                         <li>Ben Hennenkamp</li>
                         <li>Ben Scudder</li>
+                        <li>Camden Bull</li>
+                        <li>Charlie Howard</li>
+                        <li>Charlie Whitaker</li>
+                        <li>Chase Seymore</li>
+                        <li>Craig Jablonski</li>
+                        <li>Dakota Gray</li>
+                        <li>Damian Piasecki</li>
+                        <li>Davis</li>
+                        <li>Elie Rozier</li>
+                        <li>Elijah Mickle</li>
+                        <li>Grayson Broome</li>
+                        <li>Hemi</li>
+                        <li>Henry Jones</li>
+                        <li>Isaiah Johnson</li>
+                        <li>Jack Benton</li>
+                        <li>Jackson Hartig</li>
+                        <li>Jalal Harb</li>
                     </ul>
                 </div>
             </div>
@@ -166,16 +181,17 @@
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname) {
-        for (tablink in tablinks) {
+    function opentab(tabname){
+        for (tablink of tablinks) {
             tablink.classList.remove("active-link");
         }
-        for (tabcontent in tabcontents) {
+        for (tabcontent of tabcontents) {
             tabcontent.classList.remove("active-tab");
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
 </script>
+
 </body>
 </html>
