@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NC State Men's Club Rugby</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="header">
+    <div class="header-container">
+        <nav>
+            <img src="images/ncsurugbylogo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="schedule.html">Game & Practice Schedule</a></li>
+                <li><a href="accolades.html">Accolades</a></li>
+                <li><a href="hof.html">Hall of Fame</a></li>
+                <li><a href="interestform.html">Interest Form</a></li>
+                <li><a href="#socialmedia">Social Media</a></li>
+                <li><a href="#alumni">Alumni Association</a></li>
+                <li><a href="#practice">Donate</a></li>
+            </ul>
+            <div class="logo-container">
+                <img src="images/soconlogo.png" class="logo">
+                <img src="images/ncrlogo.png" class="logo">
+            </div>       
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+    <div class="header-text">
+        <p>This is the official website for The North Carolina State University Men's Rugby Team.
+             <br>Members of National Collegiate Rugby D1AA and The Southern Rugby Conference.
+        </p>
+    </div>
+    <div class="slideshow-container">
+        <div class="slideshow-wrapper">
+            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+            <div class="elfsight-app-ca9d491e-eb81-4250-a32d-3f889a042347" data-elfsight-app-lazy></div>        
+        </div>
+    </div>
+    <div class="slideshow-text">
+        <p>Pictures provided from @ncstatemensclubrugby on Instagram</p>
+    </div>
+  </div>
+<!--about section-->
+<div id="about">
+   <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/aboutphoto.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About the Team</h1>
+                <p>NC State Men's Club Rugby was founded in 1970 and has been a student run program since then. We
+                    compete in two seasons: Fall 15s and Spring 7s.<br><br> Information on current officers and roster can be found below:</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('officers')">Officers</p>
+                    <p class="tab-links" onclick="opentab('roster')">Roster</p>
+                </div> 
+                <!-- Current Officers -->
+                <div class="tab-contents active-tab" id="officers">
+                    <ul>
+                        <li><span>President</span><br>Cam Wilson</li>
+                        <li><span>Vice President</span><br>Charlie Howard</li>
+                        <li><span>Treasurer</span><br>Charlie Whitaker</li>
+                        <li><span>Match Secretary</span><br>filler</li>
+                        <li><span>Social Media</span><br>filler</li>
+                        <li><span>Social Chair</span><br>filler</li>                        
+                        <li><span>Alumni Chair</span><br>Alex Tomlinson</li>
+                    </ul>
+                </div>
+                <!-- Current Roster -->
+                <div class="tab-contents" id="roster">
+                    <ul>
+                        <li>Andy Kurth</li>
+                        <li>Alex Tomlinson</li>
+                        <li>Ben Hennenkamp</li>
+                        <li>Ben Scudder</li>
+                        <li>Camden Bull</li>
+                        <li>Charlie Howard</li>
+                        <li>Charlie Whitaker</li>
+                        <li>Chase Seymore</li>
+                        <li>Craig Jablonski</li>
+                        <li>Dakota Gray</li>
+                        <li>Damian Piasecki</li>
+                        <li>Davis</li>
+                        <li>Elie Rozier</li>
+                        <li>Elijah Mickle</li>
+                        <li>Grayson Broome</li>
+                        <li>Hemi</li>
+                        <li>Henry Jones</li>
+                        <li>Isaiah Johnson</li>
+                        <li>Jack Benton</li>
+                        <li>Jackson Hartig</li>
+                        <li>Jalal Harb</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   </div>
+</div>
+
+<!-- Interest Form -->
+<div id="interestform">
+    <div class="container">
+        <div class="row">
+            <div class="interestform-left">
+                <h1 class="sub-title">Interest Form</h1>
+                <p>Please submit this form if you are interested in joining the club.</p>
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="number" name="age" placeholder="age" required>
+                    <input type="text" name="email" placeholder="Email" required>
+                    <input type="text" name="phone" placeholder="Phone Number">
+                    <textarea name="message" rows="4" placeholder="Experience Level"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div> 
+</div>
+<!--- Social Media -->
+<div id="socialmedia">
+    <div class="container">
+        <h1 class="sub-title">Social Media</h1>
+        <div class="socialmedia-list">
+            <div>
+                <h2>Instagram</h2>
+                <a href="instagram.com/ncstatemensclubrugby">Icon - Follow Us!</a>
+            </div>
+            <div>
+                <h2>Facebook</h2>
+                <a href="facebook.com/ncstatemensclubrugby">Icon - Follow Us!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- opentab() function-->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>

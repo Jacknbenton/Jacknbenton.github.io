@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Wolfpack', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+#header{
+    width: 100%;
+    padding: 5%;
+    background-size: cover;
+    background-position: center;
+}
+.header-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(204, 0,0 );
+}
+
+.container{
+    padding: 15px 5%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between left;
+    flex-wrap: wrap;
+}
+
+.logo-container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 0;
+    padding:20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 130px;
+    margin-right: 10px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 50px 50px 50px 30px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration:NONE;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 90%;
+}
+
+.header-text{
+    margin-top: 10%;
+    margin-bottom: 3%;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.slideshow-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.slideshow-wrapper{
+    border: 5px solid gray;
+    border-radius: 1%;
+}
+
+.elfsight-app-ca9d491e-eb81-4250-a32d-3f889a042347{
+    margin-top: 50px;
+}
+
+.slideshow-text{
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* --- about section --- */
+#about {
+    padding: 80px, 0;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 100%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: red;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* --- schedule page --- */
+.schedule-col-1{
+    flex: 1;
+    padding: 10px;
+}
+
+.schedule-col-1 img{
+    width: 75%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.schedule-col-2{
+    flex: 1;
+    padding: 10px;
+}
+
+.schedule-col-2 p{
+    font-size: 2em;
+}
+
+/* --- accolades page --- */
+.team-accolades-col{
+    flex: 1;
+    padding: 10px;
+}
+
+.team-accolades-col .sub-title{
+    padding-bottom: 5%;
+}
+
+.individual-accolades-col{
+    flex: 1;
+    padding: 10px;
+}
+
+.individual-accolades-col .sub-title{
+    padding-bottom: 5%;
+}
+
+.accolades-table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.accolades-table th{
+    padding: 1%;
+    text-align: left;
+    background-color: #080808;
+}
+
+.accolades-table td{
+    padding: 1%;
+}
+
+.accolades-table tr:nth-child(even){
+    background-color: grey;
+}
+
+.accolades-table tr:nth-child(odd){
+    background-color: #ff004f;
+}
+
+/* --- hall of fame page --- */
+
+.hof-header{
+    background-color: #333;
+    color:#fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.hof-description p{
+    text-align: center;
+    padding-top: 2%;
+}
+
+.hof-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.hof-card{
+    background-color: #ff004f;
+    border: 1px solid grey;
+    margin: 10px;
+    padding: 20px;
+    width: calc(33% - 20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hof-card img{
+    max-width: 100%;
+    height: auto;
+}
+
+.hof-card h3{
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- interest form page --- */
+.interestform-header{
+    padding-left: 4%;
+    padding-bottom: 4%;
+    text-align: left;
+}
